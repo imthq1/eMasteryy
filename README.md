@@ -42,9 +42,7 @@ eMastery is a web application powered by **Gemini AI**, offering a smart and mod
 | Member Name | Main Role |
 | :--- | :--- |
 | [Hoang Anh](https://github.com/HoaqAnh) | UI/UX Design, Fullstack Developer (ReactJS + NestJS). |
-| [Thang Nguyen](https://github.com/imthq1) | Backend Developer (.Net), AI Model Fine-Tuning. |
-| [Nguyen Duc Thien](https://github.com/nguyenducthienlq1) | Backend Developer (.Net), AI Model Fine-Tuning. |
-| [Lee Hovng G.Dai](https://github.com/PeterHovng) | Contributor |
+| [Thang Nguyen](https://github.com/imthq1) | Backend Developer (Java), Front End (ReactJS) AI Model Fine-Tuning. |
 
 ## License
 
