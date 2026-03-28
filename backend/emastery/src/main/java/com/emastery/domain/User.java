@@ -1,6 +1,7 @@
 package com.emastery.domain;
 
 import com.emastery.domain.Enum.Level;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,11 +16,14 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     private String gender;
     private int age;
+
     @Enumerated(EnumType.STRING)
     private Level level;
 
@@ -28,5 +32,6 @@ public class User {
     private String password;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<Word> words;
+    @JsonManagedReference
+    private List<Collection> collections;
 }

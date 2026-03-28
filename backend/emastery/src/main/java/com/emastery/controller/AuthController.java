@@ -6,6 +6,7 @@ import com.emastery.domain.reqDTO.LoginRequest;
 import com.emastery.domain.reqDTO.ReqDTO;
 import com.emastery.domain.resDTO.LoginResponse;
 import com.emastery.domain.resDTO.ResLoginDTO;
+import com.emastery.domain.resDTO.UserInfo;
 import com.emastery.service.AuthService;
 import com.emastery.service.HealthcheckService;
 import com.emastery.service.UserService;
@@ -17,10 +18,9 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/auth")
@@ -91,5 +91,27 @@ public class AuthController {
         return ResponseEntity.ok().
                 header(HttpHeaders.SET_COOKIE, resCookies.toString())
                 .body(resLoginDTO);
+    }
+    @GetMapping("/account")
+    public ResponseEntity<UserInfo> getAccount() throws Exception {
+        Optional<String> emailOpt = SecurityUtil.getCurrentUserLogin();
+        if (emailOpt.isEmpty()) {
+            throw new Exception("User not logged in");
+        }
+        String username = emailOpt.get();
+
+        User currentUserDB = userService.getUserByEmail(username);
+        System.out.println("USER"+currentUserDB);
+        if (currentUserDB == null) {
+            throw new Exception("User not found");
+        }
+
+        UserInfo userDTO = new UserInfo();
+        userDTO.setFullName(currentUserDB.getFullname());
+        userDTO.setAge(currentUserDB.getAge());
+        userDTO.setGender(currentUserDB.getGender());
+        userDTO.setEnglishLevel(currentUserDB.getLevel());
+
+        return ResponseEntity.ok(userDTO);
     }
 }

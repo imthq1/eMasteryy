@@ -1,20 +1,35 @@
 package com.emastery.config;
 
+import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.ExternalDocumentation;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
+import io.swagger.v3.oas.models.security.SecurityRequirement;
+import io.swagger.v3.oas.models.security.SecurityScheme;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import io.swagger.v3.oas.models.servers.Server;
+
+import java.util.List;
 
 @Configuration
 public class OpenAPIConfig {
 
     @Bean
-    public OpenAPI emasteryOpenAPI() {
+    public OpenAPI customOpenAPI() {
+        final String securitySchemeName = "bearerAuth";
+
         return new OpenAPI()
-                .info(new Info()
-                        .title("E-Mastery API")
-                        .description("API cho hệ thống học từ vựng dùng AI")
-                        .version("1.0"));
+                .servers(List.of(
+                        new Server().url("https://helminthoid-unblindfolded-giuseppina.ngrok-free.dev")
+                ))
+                .addSecurityItem(new SecurityRequirement().addList(securitySchemeName))
+                .components(new Components()
+                        .addSecuritySchemes(securitySchemeName,
+                                new SecurityScheme()
+                                        .name(securitySchemeName)
+                                        .type(SecurityScheme.Type.HTTP)
+                                        .scheme("bearer")
+                                        .bearerFormat("JWT")));
     }
 }

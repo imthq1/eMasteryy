@@ -1,14 +1,16 @@
 package com.emastery.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
 @Entity(name = "words")
 @Table
+@Getter
+@Setter
 public class Word {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -16,6 +18,7 @@ public class Word {
     private String word;
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
+    @JoinColumn(name = "collection_id")
+    @JsonBackReference
+    private Collection collection;
 }
