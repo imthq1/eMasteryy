@@ -48,7 +48,7 @@ public class AuthController {
         return authService.register(request);
     }
 
-    @PostMapping("//login")
+    @PostMapping("/login")
     public ResponseEntity<ResLoginDTO> login(@RequestBody ReqDTO user) throws Exception{
         User currentUserDB=this.userService.getUserByEmail(user.getUsername());
         if(currentUserDB==null)
