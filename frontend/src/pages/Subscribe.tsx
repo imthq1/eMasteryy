@@ -10,24 +10,21 @@ const SubscribeFlow = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Chỉ chạy khi apiKey thực sự tồn tại
     if (registrationData?.apiKey) {
-      // Đảm bảo không redirect nếu đã ở đúng trang
       if (window.location.pathname !== "/login") {
-        navigate("/login", { replace: true }); // Dùng replace để tránh rác lịch sử duyệt web
+        navigate("/login", { replace: true });
       }
     }
-  }, [registrationData?.apiKey, navigate]); // ĐIỂM QUAN TRỌNG: Chỉ phụ thuộc vào biến chuỗi này
+  }, [registrationData?.apiKey, navigate]);
 
   const handleKeyValidated = () => {
-    if (window.location.pathname !== "/login") {
-      navigate("/login", { replace: true });
+    if (window.location.pathname !== "/") {
+      navigate("/", { replace: true });
     }
   };
 
   return <ApiKeySubmit onNext={handleKeyValidated} />;
 };
-// ... phần còn lại giữ nguyên
 
 const Subscribe = (): JSX.Element => {
   return (

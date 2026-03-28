@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // Import thêm hook điều hướng
+import { useNavigate } from "react-router-dom"; 
 import { loginService } from "../service/authService";
 
 const LoginForm = () => {
@@ -22,7 +22,6 @@ const LoginForm = () => {
       const res = await loginService({ username, password });
       localStorage.setItem("access_token", res.access_token);
 
-      // Đổi sang navigate cho đồng bộ và mượt mà
       navigate("/", { replace: true });
     } catch (err: any) {
       alert(err.message);

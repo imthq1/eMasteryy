@@ -8,7 +8,7 @@ const GuestRoute = ({ children }: GuestRouteProps) => {
   const token = localStorage.getItem("access_token");
 
   if (token) {
-    return <Navigate to="/" replace />;
+    return <Navigate to="/subscribe" replace />;
   }
 
   return <>{children}</>;
