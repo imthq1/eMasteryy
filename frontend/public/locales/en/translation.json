@@ -1,0 +1,233 @@
+{
+  "greeting": {
+    "helloUser": "Welcome back, {{name}}!"
+  },
+  "navMenu": {
+    "features": "Features",
+    "dictionary": "Dictionary",
+    "writingPractice": "Writing Practice",
+    "puzzleSolving": "Quiz",
+    "aiAssistant": "AI Assistant",
+    "contact": {
+      "title": "Contact",
+      "mail": "Email Us"
+    }
+  },
+  "settings": {
+    "themeSettings": {
+      "title": "Theme",
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    },
+    "languageSettings": {
+      "title": "Language",
+      "en": "English",
+      "vi": "Tiếng Việt"
+    }
+  },
+  "userProfile": {
+    "title": "Profile",
+    "profilePopup": {
+      "title": "Edit Profile",
+      "apiKey": "Gemini API Key",
+      "fullName": "Full Name",
+      "success": "Profile updated successfully!",
+      "error": "Please correct the errors before saving.",
+      "cancel": "Cancel",
+      "save": "Save"
+    }
+  },
+  "logout": {
+    "title": "Logout",
+    "message": "Are you sure you want to log out?",
+    "confirmButton": "Logout",
+    "cancelButton": "Cancel"
+  },
+  "confirmation": {
+    "cancel": "Cancel",
+    "confirm": "Confirm"
+  },
+  "error": {
+    "retry": "Retry"
+  },
+  "subscribe": {
+    "title": "Subscribe",
+    "next": "Next",
+    "confirm": "Confirm",
+    "loading": "Loading...",
+    "tutorial": "Need help? Watch the video tutorial.",
+    "api": {
+      "content": "To get started, please provide your Google AI Studio API Key.",
+      "placeholder": "Enter your API Key here...",
+      "getKey": "Get Key",
+      "loading": "Verifying key...",
+      "error": {
+        "keyRequired": "API Key is required.",
+        "keyFormatError": "Invalid API Key format or key does not exist."
+      }
+    },
+    "google": {
+      "content": "Next, let's get your name. You can enter it manually or sign in with Google.",
+      "placeholder": "Enter your full name",
+      "buttonTitle": "Sign in with Google",
+      "configError": "Google Client ID is not configured.",
+      "error": {
+        "nameRequired": "Full name is required.",
+        "nameLengthError": "Full name must be between 3 and 30 characters."
+      }
+    },
+    "profile": {
+      "content": "Finally, tell us a bit about yourself to personalize your experience.",
+      "age": "Your Age",
+      "sex": {
+        "title": "Gender",
+        "male": "Male",
+        "female": "Female",
+        "unsex": "Other"
+      },
+      "level": {
+        "title": "English Level",
+        "A1": "A1 (Beginner)",
+        "A2": "A2 (Elementary)",
+        "B1": "B1 (Intermediate)",
+        "B2": "B2 (Upper-Intermediate)",
+        "C1": "C1 (Advanced)",
+        "C2": "C2 (Proficient)"
+      },
+      "error": {
+        "ageRequired": "Age is required.",
+        "ageFormatError": "Please enter a valid age.",
+        "ageRangeError": "Age must be between 1 and 120.",
+        "genderRequired": "Gender is required.",
+        "levelRequired": "English level is required."
+      }
+    }
+  },
+  "chatbot": {
+    "welcomeMessage": "Hello! I am your AI assistant. How can I help you improve your English today?",
+    "placeholder": "Ask me anything about English...",
+    "new": "New Chat",
+    "send": "Send",
+    "info": "eMastery can make mistakes. Consider checking important information."
+  },
+  "dictionary": {
+    "title": "Explore Words",
+    "welcome": "Look up a word to get started. You can search for definitions, usage, and more.",
+    "placeholder": "Type a word to look up...",
+    "btnPlaceholder": "Search History",
+    "btnSend": "Search",
+    "pronunciation": "Pronunciation",
+    "summary": "Quick Summary",
+    "meaning": "Meaning",
+    "grammarUsage": "Grammar & Usage",
+    "phrasesAndIdioms": "Phrases & Idioms",
+    "synonymsAndAntonyms": "Synonyms/Antonyms",
+    "funFactsAndTips": "Fun Facts & Tips",
+    "collapsed": "Show less",
+    "expanded": "Show more",
+    "playAudio": "Play audio",
+    "loadingAudio": "Loading audio...",
+    "cooldown": "Please wait a moment...",
+    "history": {
+      "title": "Search History",
+      "deletePlaceholder": "Clear history",
+      "closePlaceholder": "Close",
+      "empty": "Your search history is empty."
+    },
+    "error": {
+      "valid": "Please enter a valid English word.",
+      "apiKey": "API key is missing!",
+      "audio": "Could not fetch audio data.",
+      "play": "Could not play audio.",
+      "noAudio": "No audio available for this word."
+    },
+    "notFound": {
+      "title": "No results found for",
+      "description": "We couldn't find the word you were looking for. Please check the spelling or try another word.",
+      "content": "No content available for this section."
+    }
+  },
+  "quiz": {
+    "title": "What's the phrase?",
+    "startQuiz": "New Quiz",
+    "submitAnswer": "Submit",
+    "initialPrompt": "A new quiz will be generated for you. Click 'New Quiz' to begin!",
+    "info": "eMastery can make mistakes. Consider checking important information.",
+    "showAnswer": {
+      "buttonTitle": "Show Answer",
+      "confirmTitle": "Confirm to See Answer",
+      "confirmMessage": "Are you sure you want to give up and see the answer?",
+      "correctAnswerIs": "The correct answer is"
+    },
+    "result": {
+      "title": "Your answer:"
+    },
+    "level": {
+      "title": "Difficulty:",
+      "ez": "Easy",
+      "med": "Medium",
+      "hard": "Hard"
+    }
+  },
+  "welcome": {
+    "title": "Learn English with eMastery",
+    "description": "@ Powered by Gemini AI.",
+    "cta": "Get Started for Free"
+  },
+  "features": {
+    "dictionary": {
+      "title": "AI Dictionary",
+      "description": "Look up any word and get rich, contextual explanations, not just translations."
+    },
+    "writing": {
+      "title": "Writing Practice",
+      "description": "Hone your writing skills with AI-driven feedback and interactive exercises."
+    },
+    "quiz": {
+      "title": "Interactive Quizzes",
+      "description": "Test your knowledge with dynamic quizzes that adapt to your skill level."
+    },
+    "chatbot": {
+      "title": "AI Conversationalist",
+      "description": "Practice speaking and interacting with an AI partner anytime, anywhere."
+    }
+  },
+  "home": {
+    "welcome": "Let's start your learning journey for today.",
+    "comingSoon": "Coming Soon",
+    "developing": "In Development",
+    "features": {
+      "dictionaryDesc": "Look up words and get detailed explanations.",
+      "quizDesc": "Challenge yourself with interactive quizzes.",
+      "chatbotDesc": "Chat with an AI to practice your English.",
+      "writingDesc": "Improve your writing with AI feedback.",
+      "developing": "This feature is currently under development and will be available soon."
+    },
+    "stats": {
+      "title": "Your Stats",
+      "wordsSearched": "Words Searched",
+      "quizzesTaken": "Answers Submitted"
+    },
+    "tip": {
+      "title": "Tip of the Day",
+      "content": "Use the Chatbot to practice asking for directions or ordering food in English!"
+    }
+  },
+  "contact": {
+    "title": "Contact & Feedback",
+    "name": "Your Name",
+    "namePlaceholder": "Enter your name...",
+    "message": "Feedback Content",
+    "messagePlaceholder": "What can we help you with?",
+    "send": "Send",
+    "sending": "Sending...",
+    "success": "Thank you for your feedback!",
+    "error": "Failed to send feedback",
+    "validation": {
+      "nameRequired": "Please enter your name.",
+      "messageRequired": "Please enter your feedback message.",
+      "messageLength": "Feedback message must be at least 10 characters long."
+    }
+  }
+}

@@ -1,0 +1,82 @@
+.main-layout,
+.guest-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  background-color: transparent;
+  color: var(--foreground);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 5vh;
+  padding: 5px 0;
+  box-shadow: var(--shadow-realistic);
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+  height: 95vh;
+}
+
+nav {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 20px;
+  background-color: transparent;
+}
+
+.logo {
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.logo {
+  --border-right: 4px;
+  --animation-color: #377dff;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px var(--card-foreground);
+}
+
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+
+.logo:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color));
+}
+
+@media (max-width: 380px) {
+  nav {
+    gap: 0.5rem;
+  }
+}

@@ -1,0 +1,255 @@
+{
+  "subscribe": {
+    "title": "Đăng ký",
+    "loading": "Đang tải...",
+    "next": "Bước tiếp theo",
+    "confirm": "Xác nhận đăng ký",
+    "tutorial": "Bạn cần video hướng dẫn? Nhấn vào đây.",
+    "api": {
+      "content": "Đầu tiên, bạn cần có Gemini API Key để đăng ký. Nhấn vào nút 'Lấy Key' bên dưới để lấy API Key miễn phí từ Google.",
+      "getKey": "Lấy Key",
+      "placeholder": "Nhập API key của bạn",
+      "loading": "Đang tải...",
+      "error": {
+        "keyRequired": "Vui lòng nhập API key của bạn.",
+        "keyFormatError": "API key của bạn không hợp lệ."
+      }
+    },
+    "google": {
+      "configError": "Lỗi cấu hình: Google Client ID không tìm thấy.",
+      "buttonTitle": "Liên kết Google",
+      "content": "Hãy đặt tên người dùng của bạn hoặc bạn có thể liên kết với tài khoản Google của mình.",
+      "placeholder": "Tên gọi của bạn",
+      "error": {
+        "nameRequired": "Vui lòng nhập tên của bạn.",
+        "nameLengthError": "Tên của bạn phải từ 3 đến 20 ký tự.",
+        "nameFormatError": "Tên của bạn chỉ có thể chứa chữ cái, số và dấu gạch dưới.",
+        "nameFormatError2": "Tên của bạn không được chứa ký tự đặc biệt."
+      }
+    },
+    "profile": {
+      "content": "Chúng tôi cam kết không sử dụng hoặc lưu trữ bất kỳ thông tin nào của bạn bên ngoài ứng dụng eMastery. Dữ liệu của bạn chỉ phục vụ cho mục đích trải nghiệm trong ứng dụng.",
+      "fullname": "Tên gọi của bạn",
+      "age": "Tuổi của bạn",
+      "sex": {
+        "title": "Giới tính",
+        "male": "Nam",
+        "female": "Nữ",
+        "unsex": "Khác"
+      },
+      "level": {
+        "title": "Trình độ",
+        "A1": "Người mới - A1",
+        "A2": "Tiểu học - A2",
+        "B1": "Trung học - B1",
+        "B2": "Trên trung học - B2",
+        "C1": "Chuyên nghiệp - C1",
+        "C2": "Thành thạo - C2"
+      },
+      "error": {
+        "ageRequired": "Vui lòng nhập tuổi của bạn.",
+        "ageFormatError": "Tuổi phải là một số hợp lệ.",
+        "ageRangeError": "Tuổi phải từ 1 đến 120.",
+        "genderRequired": "Vui lòng chọn giới tính của bạn.",
+        "levelRequired": "Vui lòng chọn trình độ của bạn."
+      }
+    }
+  },
+  "userProfile": {
+    "title": "Hồ sơ",
+    "viewProfile": "Xem hồ sơ",
+    "profilePopup": {
+      "title": "Cập nhật hồ sơ",
+      "apiKey": "API Key",
+      "fullName": "Tên của bạn",
+      "cancel": "Hủy",
+      "save": "Lưu",
+      "success": "Cập nhật thành công",
+      "error": "Thông tin không hợp lệ"
+    }
+  },
+  "settings": {
+    "title": "Cài đặt",
+    "languageSettings": {
+      "title": "Ngôn ngữ",
+      "vi": "Tiếng Việt",
+      "en": "Tiếng Anh"
+    },
+    "notifications": "Thông báo",
+    "themeSettings": {
+      "title": "Giao diện",
+      "light": "Sáng",
+      "dark": "Tối",
+      "system": "Hệ thống"
+    }
+  },
+  "home": {
+    "welcome": "Chúc bạn có một buổi học hiệu quả!",
+    "comingSoon": "Sắp ra mắt",
+    "developing": "Đang phát triển",
+    "features": {
+      "dictionaryDesc": "Tra cứu từ vựng, xem giải thích chi tiết và các ví dụ thực tế.",
+      "quizDesc": "Thử thách bản thân với các câu đố vui và kiểm tra kiến thức của bạn.",
+      "chatbotDesc": "Trò chuyện với trợ lý AI để luyện tập hội thoại và giải đáp thắc mắc.",
+      "writingDesc": "Cải thiện kỹ năng viết thông qua các bài tập và gợi ý.",
+      "developing": "Chúng tôi đang nghiên cứu phát triển một số chức năng khác để hỗ trợ học tiếng anh tốt hơn."
+    },
+    "stats": {
+      "title": "Thống kê nhanh",
+      "wordsSearched": "Số từ đã tra",
+      "quizzesTaken": "Số đáp án ở bài hiện tại"
+    },
+    "tip": {
+      "title": "Mẹo hay trong ngày",
+      "content": "Hãy thử sử dụng 3 từ mới bạn học được hôm nay trong một cuộc hội thoại. Lặp lại là chìa khóa để ghi nhớ!"
+    }
+  },
+  "greeting": {
+    "helloUser": "Chào mừng trở lại, {{name}}!"
+  },
+  "navMenu": {
+    "contact": {
+      "title": "Liên hệ",
+      "mail": "Mail cho chúng tôi"
+    },
+    "writingPractice": "Luyện viết",
+    "puzzleSolving": "Giải đố",
+    "features": "Chức năng",
+    "aiAssistant": "Trợ lý AI",
+    "dictionary": "Từ điển"
+  },
+  "chatbot": {
+    "title": "Trợ lý AI",
+    "welcomeMessage": "Chào mừng bạn đến với eMastery! Bạn có thể hỏi bất kỳ câu hỏi nào hoặc yêu cầu trợ giúp về chủ đề tiếng anh khác nhau.",
+    "placeholder": "Hỏi eMastery...",
+    "send": "Gửi",
+    "loading": "Đang trả lời...",
+    "new": "Đoạn chat mới",
+    "info": "eMastery có thể mắc sai sót, vì vậy hãy xác minh các câu trả lời của eMastery.",
+    "error": {
+      "networkError": "Lỗi mạng. Vui lòng thử lại sau.",
+      "apiError": "Lỗi API. Vui lòng thử lại sau."
+    }
+  },
+  "quiz": {
+    "title": "Nhập câu trả lời của bạn",
+    "startQuiz": "Tạo Quiz mới",
+    "loading": "Đang tải Quiz...",
+    "submitAnswer": "Gửi câu trả lời",
+    "initialPrompt": "Đang tải bài đọc cho bạn...",
+    "info": "eMastery có thể mắc lỗi. Hãy cân nhắc kiểm tra các thông tin quan trọng.",
+    "showAnswer": {
+      "buttonTitle": "Hiển thị đáp án",
+      "confirmTitle": "Xác nhận xem đáp án",
+      "confirmMessage": "Bạn có chắc chắn muốn bỏ cuộc và xem đáp án không?",
+      "correctAnswerIs": "Đáp án đúng là"
+    },
+    "level": {
+      "title": "Mức độ",
+      "ez": "Dễ",
+      "med": "Trung bình",
+      "hard": "Khó"
+    },
+    "result": {
+      "title": "Đáp án của bạn: ",
+      "hint": "Gợi ý: ",
+      "correct": "Đúng",
+      "incorrect": "Sai",
+      "score": "Điểm số của bạn: {{score}}/{{total}}"
+    },
+    "error": {
+      "networkError": "Lỗi mạng. Vui lòng thử lại sau.",
+      "apiError": "Lỗi API. Vui lòng thử lại sau."
+    }
+  },
+  "dictionary": {
+    "welcome": "Tra cứu từ vựng tiếng Anh để xem định nghĩa, phát âm, ví dụ và hơn thế nữa.",
+    "title": "Từ điển eMastery",
+    "placeholder": "Nhập từ cần tra...",
+    "btnPlaceholder": "Lịch sử tra cứu",
+    "btnSend": "Tra cứu",
+    "pronunciation": "Phát âm",
+    "expanded": "Mở rộng",
+    "collapsed": "Thu gọn",
+    "summary": "Tóm tắt",
+    "meaning": "Giải nghĩa",
+    "grammarUsage": "Ngữ pháp",
+    "phrasesAndIdioms": "Cụm từ",
+    "synonymsAndAntonyms": "Từ liên quan",
+    "funFactsAndTips": "Mẹo nhớ",
+    "loadingAudio": "Đang tải audio...",
+    "playAudio": "Phát audio",
+    "cooldown": "Chờ tí",
+    "error": {
+      "valid": "Chỉ hỗ trợ tra cứu từ đơn tiếng anh và không sử dụng ký tự đặc biệt.",
+      "apiKey": "Thiếu API Key. Vui lòng làm mới lại trang.",
+      "audio": "Có lỗi khi tải audio.",
+      "play": "Có lỗi khi phát audio.",
+      "noAudio": "Không có audio để phát."
+    },
+    "notFound": {
+      "title": "Không tìm thấy từ",
+      "description": "Vui lòng kiểm tra lại chính tả hoặc thử một từ khác.",
+      "content": "Nội dung không có sẵn."
+    },
+    "history": {
+      "closePlaceholder": "Đóng",
+      "deletePlaceholder": "Xóa tất cả lịch sử",
+      "title": "Lịch sử tra cứu",
+      "empty": "Chưa có lịch sử tra cứu."
+    }
+  },
+  "error": {
+    "retry": "Thử lại"
+  },
+  "welcome": {
+    "title": "Học tiếng anh cùng eMastery",
+    "description": "@ Powered by Gemini AI.",
+    "cta": "Bắt đầu ngay"
+  },
+  "features": {
+    "dictionary": {
+      "title": "Tra cứu từ điển",
+      "description": "Tra cứu từ vựng cùng với những thông tin chi tiết và bổ ích như cách phát âm, giải nghĩa, ngữ pháp, mẹo ghi nhớ và hơn thế nữa."
+    },
+    "writing": {
+      "title": "Luyện viết",
+      "description": "Nâng cao kỹ năng viết của bạn với các bài tập có hướng dẫn và phản hồi được cá nhân hóa."
+    },
+    "quiz": {
+      "title": "Giải đố tiếng anh",
+      "description": "Kiểm tra kiến thức từ vựng của bạn với các câu đố hấp dẫn, có khả năng tùy chỉnh theo trình độ của bạn."
+    },
+    "chatbot": {
+      "title": "Trợ lý AI",
+      "description": "Trò chuyện với AI của chúng tôi, hỗ trợ quá trình học tập và giải đáp thắc mắc của bạn một cách nhanh chóng."
+    }
+  },
+  "logout": {
+    "title": "Đăng xuất",
+    "message": "Bạn có chắc chắn muốn đăng xuất? Toàn bộ lịch sử tra cứu và các đoạn hội thoại sẽ bị xóa vĩnh viễn và không thể khôi phục.",
+    "confirmButton": "Vẫn đăng xuất",
+    "cancelButton": "Hủy bỏ",
+    "success": "Đăng xuất thành công!"
+  },
+  "confirmation": {
+    "cancel": "Hủy",
+    "confirm": "Xác nhận"
+  },
+  "contact": {
+    "title": "Liên hệ & Phản hồi",
+    "name": "Tên của bạn",
+    "namePlaceholder": "Nhập tên của bạn...",
+    "message": "Nội dung phản hồi",
+    "messagePlaceholder": "Chúng tôi có thể giúp gì cho bạn?",
+    "send": "Gửi",
+    "sending": "Đang gửi...",
+    "success": "Cảm ơn bạn đã gửi phản hồi!",
+    "error": "Gửi thất bại",
+    "validation": {
+      "nameRequired": "Vui lòng nhập tên của bạn.",
+      "messageRequired": "Vui lòng nhập nội dung phản hồi.",
+      "messageLength": "Nội dung phản hồi cần ít nhất 10 ký tự."
+    }
+  }
+}
