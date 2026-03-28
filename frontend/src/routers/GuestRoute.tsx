@@ -1,22 +1,13 @@
-import { type ReactNode, type JSX } from "react";
 import { Navigate } from "react-router-dom";
-import { useRegistration } from "@/context/RegistrationContext";
 
 interface GuestRouteProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
-const GuestRoute = ({ children }: GuestRouteProps): JSX.Element => {
-  const { registrationData } = useRegistration();
+const GuestRoute = ({ children }: GuestRouteProps) => {
+  const token = localStorage.getItem("access_token");
 
-  const isAuthenticated =
-    !!registrationData.apiKey &&
-    !!registrationData.fullName &&
-    !!registrationData.age &&
-    !!registrationData.gender &&
-    !!registrationData.level;
-
-  if (isAuthenticated) {
+  if (token) {
     return <Navigate to="/" replace />;
   }
 
