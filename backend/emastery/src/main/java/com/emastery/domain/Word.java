@@ -16,7 +16,7 @@ public class Word {
     private int id;
 
     private String word;
-
+    private boolean learned=false;
     @ManyToOne
     @JoinColumn(name = "collection_id")
     @JsonBackReference
