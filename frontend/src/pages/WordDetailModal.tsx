@@ -11,7 +11,7 @@ interface WordDetailModalProps {
 }
 
 const WordDetailModal = ({ word, onClose }: WordDetailModalProps) => {
-  const { data, isLoading, error, fetchTranslation } = useDictionary();
+  const { data, isLoading, fetchTranslation } = useDictionary();
   const [audioUrl, setAudioUrl] = useState<string | null>(null);
 
   useEffect(() => {
