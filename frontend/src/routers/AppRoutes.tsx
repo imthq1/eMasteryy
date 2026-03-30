@@ -12,6 +12,8 @@ import Chatbot from "@pages/Chatbot";
 import Quiz from "@pages/Quiz";
 import Dictionary from "@/pages/Dictionary";
 import LoginPage from "@/pages/LoginPage";
+import CollectionsPage from "@/pages/CollectionsPage";
+import CollectionDetailPage from "@/pages/CollectionDetailPage";
 
 const AppRoutes = (): JSX.Element => {
   return (
@@ -51,6 +53,11 @@ const AppRoutes = (): JSX.Element => {
         {/* Đã xóa /login khỏi khu vực này */}
         <Route path="quiz" element={<Quiz />} />
         <Route path="dictionary" element={<Dictionary />} />
+        <Route path="/collections" element={<CollectionsPage />} />
+        <Route
+          path="/collections/:collectionId"
+          element={<CollectionDetailPage />}
+        />
       </Route>
 
       {/* 404 Not Found */}
