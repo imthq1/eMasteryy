@@ -9,7 +9,7 @@ import {
   EditIcon,
   LogoutIcon,
 } from "@components/common/Icons";
-
+import { useNavigate } from "react-router-dom";
 type ThemeSetting = "light" | "dark" | "system";
 
 interface UserSettingsProps {
@@ -23,7 +23,7 @@ const UserSettings = ({
 }: UserSettingsProps): JSX.Element => {
   const { themeSetting, setThemeSetting } = useTheme();
   const { t, i18n } = useTranslation();
-
+  const navigator = useNavigate();
   const {
     ref: dropdownRef,
     isOpen: isDropdownOpen,
@@ -136,7 +136,23 @@ const UserSettings = ({
               </button>
             </div>
           </div>
-
+          <div className="nav-actions__dropdown-section">
+            <h3 className="nav-actions__dropdown-title">
+              {t("collections.title", "Collections")}
+            </h3>
+            <div className="nav-actions__dropdown-profile-group">
+              <button
+                className="nav-actions__dropdown-item"
+                type="button"
+                onClick={() => {
+                  navigator("/collections");
+                  toggleDropdown();
+                }}
+              >
+                <span>{t("collections.myCollections", "My Collections")}</span>
+              </button>
+            </div>
+          </div>
           {/* Logout Section */}
           <div className="nav-actions__dropdown-divider" />
           <div className="nav-actions__dropdown-section">

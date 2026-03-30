@@ -5,7 +5,7 @@ import { useRegistration } from "@/context/RegistrationContext";
 import { useApiKeyCheck } from "@/features/subscribe/hooks/useApiKeyCheck";
 import { CloseIcon } from "@/components/common/Icons";
 import "@styles/components/ProfilePopup.css";
-
+import { getAccountService } from "@/features/auth/service/authService";
 interface ProfilePopupProps {
   isOpen: boolean;
   onClose: () => void;
@@ -50,24 +50,35 @@ const ProfilePopup = ({
   const [errors, setErrors] = useState<ProfileErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  useEffect(() => {
-    if (isOpen) {
+  const fetchProfile = async () => {
+    try {
+      const data = await getAccountService();
+
       setFormData({
         apiKey: registrationData.apiKey || "",
-        fullName: registrationData.fullName || "",
-        age: registrationData.age || "",
-        gender: registrationData.gender || "",
-        level: registrationData.level || "",
+        fullName: data.FullName || "",
+        age: data.Age ? data.Age.toString() : "",
+        gender: data.Gender ? data.Gender.toLowerCase() : "",
+        level: data.englishLevel || "",
       });
+
       setErrors({});
       resetApiKeyValidation();
+    } catch (err) {
+      toast.error("Không tải được thông tin user");
     }
-  }, [isOpen, registrationData, resetApiKeyValidation]);
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      fetchProfile();
+    }
+  }, [isOpen]);
 
   if (!isOpen) return null;
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -158,7 +169,9 @@ const ProfilePopup = ({
     <div className="profile-popup-overlay">
       <div className="profile-popup">
         <div className="profile-popup__header">
-          <h3 className="profile-popup__title">{t("userProfile.profilePopup.title")}</h3>
+          <h3 className="profile-popup__title">
+            {t("userProfile.profilePopup.title")}
+          </h3>
           <button
             className="profile-popup__close-btn"
             onClick={onClose}
@@ -171,7 +184,9 @@ const ProfilePopup = ({
         <form onSubmit={handleSubmit} className="profile-popup__form">
           {/* API Key */}
           <div className="profile-popup__form-group">
-            <label htmlFor="apiKey">{t("userProfile.profilePopup.apiKey")}</label>
+            <label htmlFor="apiKey">
+              {t("userProfile.profilePopup.apiKey")}
+            </label>
             <input
               id="apiKey"
               name="apiKey"
@@ -188,7 +203,9 @@ const ProfilePopup = ({
 
           {/* Full Name */}
           <div className="profile-popup__form-group">
-            <label htmlFor="fullName">{t("userProfile.profilePopup.fullName")}</label>
+            <label htmlFor="fullName">
+              {t("userProfile.profilePopup.fullName")}
+            </label>
             <input
               id="fullName"
               name="fullName"
@@ -281,7 +298,9 @@ const ProfilePopup = ({
               className="btn__profile-popup-save"
               disabled={isLoading}
             >
-              {isLoading ? t("subscribe.loading") : t("userProfile.profilePopup.save")}
+              {isLoading
+                ? t("subscribe.loading")
+                : t("userProfile.profilePopup.save")}
             </button>
           </div>
         </form>
