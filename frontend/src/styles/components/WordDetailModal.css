@@ -1,0 +1,142 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.word-modal-content {
+  background-color: var(--card);
+  color: var(--card-foreground);
+  width: 90%;
+  max-width: 600px;
+  max-height: 85vh;
+  border-radius: 16px;
+  padding: 30px;
+  position: relative;
+  overflow-y: auto;
+  box-shadow: var(--shadow-realistic);
+  border: 1px solid var(--border);
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: var(--muted-foreground);
+  cursor: pointer;
+}
+
+.modal-header {
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.modal-header h2 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  text-transform: capitalize;
+}
+
+.pronunciation-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.phonetic {
+  font-size: 1.2rem;
+  color: var(--secondary);
+  font-family: sans-serif;
+}
+
+.audio-btn {
+  background: var(--accent);
+  color: var(--accent-foreground);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.audio-btn:hover {
+  transform: scale(1.1);
+}
+
+.modal-body section {
+  margin-bottom: 25px;
+}
+
+.modal-body h3 {
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.text-content {
+  line-height: 1.6;
+  white-space: pre-line; /* Quan trọng để giữ format xuống dòng từ API */
+}
+
+.summary-box {
+  background-color: var(--background);
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid var(--ring);
+}
+/* Container bọc nội dung Markdown */
+.markdown-container {
+  line-height: 1.6;
+}
+
+/* Định dạng danh sách */
+.markdown-container ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.markdown-container li {
+  margin-bottom: 8px;
+  color: var(--card-foreground);
+}
+
+/* Định dạng các đoạn text đậm (Bold) */
+.markdown-container strong {
+  color: var(--secondary); /* Hoặc màu bất kỳ bạn muốn nổi bật */
+  font-weight: 600;
+}
+
+/* Khoảng cách giữa các đoạn văn */
+.markdown-container p {
+  margin-bottom: 10px;
+}
+
+/* Tùy chỉnh thanh cuộn cho Modal content */
+.word-modal-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.word-modal-content::-webkit-scrollbar-thumb {
+  background-color: var(--border);
+  border-radius: 10px;
+}

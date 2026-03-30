@@ -1,0 +1,89 @@
+.collection-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--foreground);
+}
+
+.collection-detail h1 {
+  margin-bottom: 2rem;
+  color: var(--primary);
+}
+
+.add-word {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.add-word input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  color: var(--foreground);
+}
+
+.add-word button {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  padding: 0 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.word-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.word-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--card);
+  padding: 16px 20px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-realistic);
+}
+
+.word-card span {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.word-card span.learned {
+  text-decoration: line-through;
+  color: var(--muted-foreground);
+  opacity: 0.6;
+}
+
+.word-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.word-actions button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.word-actions button:first-child {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+}
+
+.word-actions button:last-child {
+  background-color: var(--destructive);
+  color: var(--destructive-foreground);
+}
