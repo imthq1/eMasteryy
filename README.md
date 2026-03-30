@@ -35,7 +35,7 @@ eMastery is a web application powered by **Gemini AI**, offering a smart and mod
 
 | Backend (Server) | Frontend (User Interface) |
 | :--- | :--- |
-| <ul><li><b>Framework:</b> .NET 8</li><li><b>Language:</b> C#</li><li><b>API:</b> RESTful API</li></ul> | <ul><li><b>Framework:</b> ReactJS (with Vite)</li><li><b>Language:</b> TypeScript</li><li><b>State Management:</b> React Hooks & Context API</li><li><b>Routing:</b> React Router</li><li><b>Styling:</b> CSS3</li><li><b>Multi-language:</b> i18next</li></ul> |
+| <ul><li><b>Framework:</b> Spring Boot </li><li><b>Language:</b> Java</li><li><b>API:</b> RESTful API</li></ul> | <ul><li><b>Framework:</b> ReactJS (with Vite)</li><li><b>Language:</b> TypeScript</li><li><b>State Management:</b> React Hooks & Context API</li><li><b>Routing:</b> React Router</li><li><b>Styling:</b> CSS3</li><li><b>Multi-language:</b> i18next</li></ul> |
 
 ## Team Members
 
