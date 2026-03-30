@@ -19,14 +19,14 @@ export interface TranslateResponse {
 }
 
 export const translateWordService = async (
-  payload: TranslateRequest
+  payload: TranslateRequest,
 ): Promise<TranslateResponse> => {
   const baseUrl = import.meta.env.VITE_API_BASE_URL;
-  const translateEndpoint = "/translate";
+  const translateEndpoint = "/dictionary/translate";
 
   if (!baseUrl) {
     throw new Error(
-      "Lỗi cấu hình: VITE_API_BASE_URL chưa được đặt trong file .env"
+      "Lỗi cấu hình: VITE_API_BASE_URL chưa được đặt trong file .env",
     );
   }
 
