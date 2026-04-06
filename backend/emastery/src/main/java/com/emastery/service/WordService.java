@@ -17,6 +17,20 @@ public class WordService {
     private final WordRepository wordRepository;
     private final CollectionRepository collectionRepository;
 
+    public Word markAsLearned(int wordId) {
+        Word word = wordRepository.findById(wordId)
+                .orElseThrow(() -> new RuntimeException("Word not found"));
+
+        word.setLearned(true);
+        return wordRepository.save(word);
+    }
+
+    public void deleteWord(int wordId) {
+        if (!wordRepository.existsById(wordId)) {
+            throw new RuntimeException("Word not found");
+        }
+        wordRepository.deleteById(wordId);
+    }
     public Word addWord(int collectionId, CreateWordRequest request) {
         Collection collection = collectionRepository.findById(collectionId)
                 .orElseThrow(() -> new RuntimeException("Collection not found"));

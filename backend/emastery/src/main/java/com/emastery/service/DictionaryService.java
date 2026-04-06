@@ -23,7 +23,7 @@ public class DictionaryService {
     private final RestTemplate restTemplate;
     private static final int MAX_RETRIES = 2;
     private static final String GEMINI_URL =
-      "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=";
+      "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=";
 
     public String translateWord(String word, String apiKey) {
         if (apiKey == null || apiKey.isBlank())

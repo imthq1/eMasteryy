@@ -21,6 +21,4 @@ public class UserInfo {
 
     @Enumerated(EnumType.STRING)
     public Level englishLevel;
-
-    public String access_token;
 }

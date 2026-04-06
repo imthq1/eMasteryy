@@ -1,5 +1,6 @@
 package com.emastery.service;
 
+import com.emastery.config.SecurityUtil;
 import com.emastery.domain.Collection;
 import com.emastery.domain.User;
 import com.emastery.domain.reqDTO.CreateCollectionRequest;
@@ -17,10 +18,9 @@ public class CollectionService {
     private final CollectionRepository collectionRepository;
     private final UserRepository userRepository;
 
-    public Collection createCollection(int userId, CreateCollectionRequest request) {
-        User user = userRepository.findById(userId)
-                .orElseThrow(() -> new RuntimeException("User not found"));
-
+    public Collection createCollection(CreateCollectionRequest request) {
+        String username= SecurityUtil.getCurrentUserLogin().get();
+        User user = userRepository.findByUsername(username);
         Collection collection = new Collection();
         collection.setName(request.getName());
         collection.setUser(user);
@@ -28,7 +28,15 @@ public class CollectionService {
         return collectionRepository.save(collection);
     }
 
-    public List<Collection> getCollectionsByUser(int userId) {
-        return collectionRepository.findByUserId(userId);
+    public List<Collection> getCollectionsByUser() {
+        String username= SecurityUtil.getCurrentUserLogin().get();
+        User user = userRepository.findByUsername(username);
+        return collectionRepository.findByUserId(user.getId());
+    }
+    public void deleteCollection(int collectionId) {
+        if (!collectionRepository.existsById(collectionId)) {
+            throw new RuntimeException("Collection not found");
+        }
+        collectionRepository.deleteById(collectionId);
     }
 }

@@ -20,9 +20,9 @@ public class OpenAPIConfig {
         final String securitySchemeName = "bearerAuth";
 
         return new OpenAPI()
-                .servers(List.of(
-                        new Server().url("https://helminthoid-unblindfolded-giuseppina.ngrok-free.dev")
-                ))
+//                .servers(List.of(
+//                        new Server().url("https://helminthoid-unblindfolded-giuseppina.ngrok-free.dev")
+//                ))
                 .addSecurityItem(new SecurityRequirement().addList(securitySchemeName))
                 .components(new Components()
                         .addSecuritySchemes(securitySchemeName,

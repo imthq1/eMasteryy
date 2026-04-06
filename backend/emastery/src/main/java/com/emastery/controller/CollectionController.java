@@ -13,16 +13,19 @@ public class CollectionController {
 
     private final CollectionService collectionService;
 
-    @PostMapping("/{userId}")
+    @PostMapping()
     public ResponseEntity<?> createCollection(
-            @PathVariable int userId,
             @RequestBody CreateCollectionRequest request) {
-
-        return ResponseEntity.ok(collectionService.createCollection(userId, request));
+        return ResponseEntity.ok(collectionService.createCollection(request));
     }
 
-    @GetMapping("/user/{userId}")
-    public ResponseEntity<?> getCollections(@PathVariable int userId) {
-        return ResponseEntity.ok(collectionService.getCollectionsByUser(userId));
+    @GetMapping("/user")
+    public ResponseEntity<?> getCollections() {
+        return ResponseEntity.ok(collectionService.getCollectionsByUser());
+    }
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteCollection(@PathVariable int id) {
+        collectionService.deleteCollection(id);
+        return ResponseEntity.ok("Deleted collection successfully");
     }
 }

@@ -36,6 +36,10 @@ public class SecurityConfig {
         return new RestTemplate();
     }
     @Bean
+    public ObjectMapper objectMapper() {
+        return new ObjectMapper();
+    }
+    @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowedOrigins(List.of(
@@ -58,7 +62,7 @@ public class SecurityConfig {
                 .cors(cors -> {cors.configurationSource(corsConfigurationSource());})
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/auth/account").authenticated()
+                        .requestMatchers("/api/auth/account","/api/collections/**","/api/words/**").authenticated()
                         .anyRequest().permitAll()
                 )
                 .oauth2ResourceServer(oauth2 -> oauth2
